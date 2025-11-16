@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.WhyUs)Model.Content;
+
+}
+
+<section class="trusted">
+    <div class="container">
+        <h2>@content.WhyUsTitle</h2>
+        <p>@content.WhyUsText</p>
+        <a href="#" class="btn">Read our story</a>
+        <div class="team-image">
+            <img src="@content.WhyUsImage.Url()" alt="Our Team">
+        </div>
+    </div>
+</section>
+

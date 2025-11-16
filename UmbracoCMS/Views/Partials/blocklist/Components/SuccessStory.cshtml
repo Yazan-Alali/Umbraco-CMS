@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessStory)Model.Content;
+}
+
+<section class="stats">
+    <div class="container">
+        <h4>@content.SuccessLable</h4>
+        <h2>@content.SuccessTitle</h2>
+        <div class="stats-wrapper">
+         
+            <div class="stat-item">
+                <span class="stat-number">689</span>
+                <p>More than 100 customers has been served</p>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-number">370</span>
+                <p>More than 370 projects has been completed</p>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-number">125</span>
+                <p>More than 125 branches has been established in Europe and America</p>
+            </div>
+
+        </div>
+
+        <img src="@content.SuccessImage.Url()"/>
+
+    </div>
+</section> 

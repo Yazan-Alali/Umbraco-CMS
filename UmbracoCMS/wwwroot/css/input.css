@@ -1,0 +1,8 @@
+﻿@import "tailwindcss";
+
+
+.current a{
+    @apply text-secondary;
+
+}
+

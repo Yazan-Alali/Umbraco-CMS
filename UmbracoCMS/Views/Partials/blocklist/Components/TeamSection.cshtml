@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.TeamSection)Model.Content;
+}
+
+
+<section class="team-section">
+    <div class="container">
+        <h2>@content.TeamLable</h2>
+        <div>@Html.Raw(content.TeamTitle)</div>
+
+        <div class="team-grid">
+			
+            @Html.GetBlockListHtml(content.TeamMemberList)
+
+           
+        </div>
+    </div>
+</section>
+
+
