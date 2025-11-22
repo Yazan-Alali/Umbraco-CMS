@@ -2,7 +2,7 @@
 
 
 .current a{
-    @apply text-secondary;
+    @apply text-gray-700;
 
 }
 
